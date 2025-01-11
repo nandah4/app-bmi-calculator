@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.example.bmicalculator"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.bmicalculator"
         minSdk = 21
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -36,7 +36,7 @@ android {
 }
 
 dependencies {
-
+    implementation ("com.google.android.material:material:1.9.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
