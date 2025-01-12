@@ -5,19 +5,20 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingStart="25dp"
-    android:paddingTop="25dp"
-    android:paddingEnd="25dp"
+    android:paddingStart="28dp"
+    android:paddingTop="28dp"
+    android:paddingEnd="28dp"
     tools:context=".MainActivity">
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="380dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:scaleType="centerCrop"
         tools:src="@tools:sample/avatars"
+        app:shapeAppearance="@style/Shape.FullRounded"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
