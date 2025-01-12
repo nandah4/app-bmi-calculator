@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BMIcalculator</string>
+
+    <string name="onboard_title1">Transform Speech into Your Body Goals</string>
 </resources>

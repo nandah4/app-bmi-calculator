@@ -5,20 +5,50 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingStart="28dp"
-    android:paddingTop="28dp"
-    android:paddingEnd="28dp"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/white"
+    >
 
     <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shapeableImageView"
         android:layout_width="match_parent"
-        android:layout_height="380dp"
+        android:layout_height="400dp"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:scaleType="centerCrop"
-        tools:src="@tools:sample/avatars"
-        app:shapeAppearance="@style/Shape.FullRounded"
+        app:shapeAppearance="@style/RoundedSize"
+        android:src="@drawable/background"
+        android:layout_marginTop="25dp"
+        style="@style/SpaceElementHorizontal"
         />
 
+    <TextView
+        android:id="@+id/textView"
+        style="@style/SpaceElementHorizontal"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="monospace"
+        android:text="@string/onboard_title1"
+        android:textAlignment="center"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shapeableImageView" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        style="@style/SpaceElementHorizontal"
+        android:text="Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        android:textSize="14sp"
+        android:fontFamily="monospace"
+        android:textAlignment="center"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
