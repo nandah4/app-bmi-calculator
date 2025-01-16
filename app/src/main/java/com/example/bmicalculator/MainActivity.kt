@@ -20,9 +20,5 @@ class MainActivity : AppCompatActivity() {
             .setReorderingAllowed(true)
             .add(R.id.fragment_container, fragment1, OnBoardScreenFragment::class.java.simpleName)
             .commit()
-
-        binding.btnNextMain.setOnClickListener {
-
-        }
     }
 }

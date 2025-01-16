@@ -49,5 +49,23 @@
         android:textAlignment="center"
         />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_next_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        style="@style/SpaceElementHorizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Masuk ke Halaman Utama"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:backgroundTint="@color/stroke_btn"
+        android:textColor="@color/black"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
