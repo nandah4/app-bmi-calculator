@@ -2,10 +2,10 @@ package com.example.bmicalculator
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.bmicalculator.databinding.FragmentOnBoardScreenBinding
 
 class OnBoardScreenFragment : Fragment() {
@@ -27,6 +27,7 @@ class OnBoardScreenFragment : Fragment() {
         binding.btnNextMain.setOnClickListener {
             val intentNext = Intent(requireContext(), HomeActivity::class.java)
             startActivity(intentNext)
+            requireActivity().finish()
         }
     }
 
