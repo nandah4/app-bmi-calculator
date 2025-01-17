@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto">
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-        <style name="SpaceElementHorizontal">
-            <item name="android:layout_marginEnd">25dp</item>
-            <item name="android:layout_marginStart">25dp</item>
-        </style>
+    <style name="SpaceElementHorizontal">
+        <item name="android:layout_marginEnd">25dp</item>
+        <item name="android:layout_marginStart">25dp</item>
+    </style>
+
+    <style name="StyleBtnHome">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="backgroundTint">@color/bg_btn</item>
+        <item name="cornerRadius">5dp</item>
+        <item name="fontFamily">monospace</item>
+    </style>
 
     <style name="RoundedSize">
-            <item name="cornerSize">7%</item>
-            <item name="cornerFamily">rounded</item>
-        </style>
+        <item name="cornerSize">7%</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
 </resources>

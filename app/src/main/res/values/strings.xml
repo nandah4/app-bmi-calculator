@@ -4,4 +4,9 @@
     <string name="onboard_title1">Transform Speech into Your Body Goals</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--  Home Page  -->
+    <string name="tv_headline">Selamat datang di halaman utama!</string>
+    <string name="btn_man">Man</string>
+    <string name="btn_woman">Woman</string>
 </resources>

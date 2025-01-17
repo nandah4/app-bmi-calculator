@@ -1,11 +1,11 @@
 package com.example.bmicalculator
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.replace
 import com.example.bmicalculator.databinding.FragmentOnBoardScreenBinding
 
 class OnBoardScreenFragment : Fragment() {
@@ -24,12 +24,9 @@ class OnBoardScreenFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val fragmentMain = FragmentMainPage()
         binding.btnNextMain.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .setReorderingAllowed(true)
-                .replace(R.id.fragment_container, fragmentMain, FragmentMainPage::class.java.simpleName)
-                .commit()
+            val intentNext = Intent(requireContext(), HomeActivity::class.java)
+            startActivity(intentNext)
         }
     }
 
