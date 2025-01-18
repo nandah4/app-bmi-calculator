@@ -9,4 +9,9 @@
     <string name="tv_headline">Selamat datang di halaman utama!</string>
     <string name="btn_man">Man</string>
     <string name="btn_woman">Woman</string>
+
+    <!--  Count Page  -->
+    <string name="btn_count">Hitung</string>
+    <string name="tv_height">Input height (cm)</string>
+    <string name="tv_weigth">Input weight (kg)</string>
 </resources>

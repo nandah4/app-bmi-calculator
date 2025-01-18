@@ -19,4 +19,10 @@
         <item name="cornerSize">7%</item>
         <item name="cornerFamily">rounded</item>
     </style>
+
+    <style name="StyleBtnHome.HorizontalMargin">
+        <item name="android:layout_marginEnd">25dp</item>
+        <item name="android:layout_marginStart">25dp</item>
+    </style>
+
 </resources>

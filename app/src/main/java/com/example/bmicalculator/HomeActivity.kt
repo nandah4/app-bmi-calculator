@@ -16,18 +16,40 @@ class HomeActivity : AppCompatActivity() {
 
         val mFragmentManager = supportFragmentManager
         val fragmentMan = ManFragment()
-
-
+        val fragmentWoman = WomanFragment()
 
         mFragmentManager.beginTransaction()
             .setReorderingAllowed(true)
-            .add(R.id.container_fragment_home, fragmentMan, ManFragment::class.java.simpleName)
+            .replace(R.id.container_fragment_home, fragmentMan, ManFragment::class.java.simpleName)
             .commit()
 
         binding.btnMan.setOnClickListener {
+            val isFragmentExist =
+                mFragmentManager.findFragmentByTag(ManFragment::class.java.simpleName)
+
+            if (isFragmentExist == null) {
+                mFragmentManager.beginTransaction()
+                    .setReorderingAllowed(true)
+                    .replace(
+                        R.id.container_fragment_home,
+                        fragmentMan,
+                        ManFragment::class.java.simpleName
+                    )
+                    .commit()
+            }
+        }
+
+        binding.btnWoman.setOnClickListener {
+            val isWFragmentExist =
+                mFragmentManager.findFragmentByTag(WomanFragment::class.java.simpleName)
+
             mFragmentManager.beginTransaction()
                 .setReorderingAllowed(true)
-                .add(R.id.container_fragment_home, fragmentMan, ManFragment::class.java.simpleName)
+                .replace(
+                    R.id.container_fragment_home,
+                    fragmentWoman,
+                    WomanFragment::class.java.simpleName
+                )
                 .commit()
         }
     }
