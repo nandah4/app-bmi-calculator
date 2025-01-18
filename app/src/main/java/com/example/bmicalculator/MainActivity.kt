@@ -1,12 +1,9 @@
 package com.example.bmicalculator
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.fragment.app.commit
 import com.example.bmicalculator.databinding.ActivityMainBinding
+import com.example.bmicalculator.fragment.OnBoardScreenFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

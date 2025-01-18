@@ -1,4 +1,4 @@
-package com.example.bmicalculator
+package com.example.bmicalculator.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

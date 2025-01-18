@@ -3,6 +3,8 @@ package com.example.bmicalculator
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.bmicalculator.databinding.ActivityHomeBinding
+import com.example.bmicalculator.fragment.ManFragment
+import com.example.bmicalculator.fragment.WomanFragment
 
 
 class HomeActivity : AppCompatActivity() {

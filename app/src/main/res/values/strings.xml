@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">BMIcalculator</string>
 
-    <string name="onboard_title1">Transform Speech into Your Body Goals</string>
+    <!-- On Board Screen  -->
+    <string name="onboard_title1">Selamat Datang di BMI Calculator</string>
+    <string name="onboard_description">Temukan cara mudah untuk menghitung Indeks Massa Tubuh (BMI) Anda. Dengan aplikasi ini, Anda bisa mengetahui status kesehatan tubuh Anda dan mendapatkan rekomendasi untuk mencapai berat badan ideal.</string>
+    <string name="onboard_btn">Mulai Sekarang</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
