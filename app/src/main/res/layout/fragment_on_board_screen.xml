@@ -55,5 +55,6 @@
         app:layout_constraintStart_toStartOf="parent"
         android:text="@string/onboard_btn"
         android:fontFamily="@font/poppins"
-        android:backgroundTint="@color/bt_btn2" />
+        android:backgroundTint="@color/bt_btn2"
+        android:textSize="15sp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

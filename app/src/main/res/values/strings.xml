@@ -5,6 +5,12 @@
     <string name="onboard_title1">Selamat Datang di BMI Calculator</string>
     <string name="onboard_description">Temukan cara mudah untuk menghitung Indeks Massa Tubuh (BMI) Anda. Dengan aplikasi ini, Anda bisa mengetahui status kesehatan tubuh Anda dan mendapatkan rekomendasi untuk mencapai berat badan ideal.</string>
     <string name="onboard_btn">Mulai Sekarang</string>
+
+    <!--  Popup Form  -->
+    <string name="popup_title">Yuk, Kenalan Dulu!</string>
+    <string name="popup_description">Masukkan nama Anda, dan kami akan membantu menghitung BMI Anda dengan pengalaman yang lebih personal.</string>
+    <string name="popup_btn">Lanjutkan</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

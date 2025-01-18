@@ -1,12 +1,10 @@
 package com.example.bmicalculator.fragment
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.bmicalculator.HomeActivity
 import com.example.bmicalculator.databinding.FragmentOnBoardScreenBinding
 
 class OnBoardScreenFragment : Fragment() {
@@ -25,11 +23,11 @@ class OnBoardScreenFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val fragmentManager = childFragmentManager
+        val formFragment = FormFragment()
+
         binding.btnNextMain.setOnClickListener {
-            val intentNext = Intent(requireContext(), HomeActivity::class.java)
-            startActivity(intentNext)
-            requireActivity().finish()
+            formFragment.show(fragmentManager, FormFragment()::class.java.simpleName)
         }
     }
-
 }
