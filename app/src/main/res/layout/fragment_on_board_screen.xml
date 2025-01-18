@@ -21,15 +21,14 @@
 
     <TextView
         android:id="@+id/textView"
-        style="@style/SpaceElementHorizontal"
+        style="@style/SpaceElementHorizontal.TextView"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:fontFamily="@font/poppins"
         android:text="@string/onboard_title1"
-        android:textAlignment="center"
         android:textSize="23sp"
-        android:textStyle="bold"
+        android:textStyle="normal"
+        android:textFontWeight="500"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/shapeableImageView" />
@@ -41,28 +40,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        style="@style/SpaceElementHorizontal"
+        style="@style/SpaceElementHorizontal.TextView"
         android:text="@string/onboard_description"
-        android:textSize="15sp"
-        android:fontFamily="@font/poppins"
-        android:textAlignment="center" />
+        android:textSize="15sp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_next_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
-        style="@style/SpaceElementHorizontal"
+        style="@style/SpaceElementHorizontal.Btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:text="@string/onboard_btn"
         android:fontFamily="@font/poppins"
-        android:textStyle="bold"
-        android:backgroundTint="@color/bt_btn2"
-        android:paddingTop="12dp"
-        app:cornerRadius="10dp"
-        android:paddingBottom="12dp" />
-
-
+        android:backgroundTint="@color/bt_btn2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
