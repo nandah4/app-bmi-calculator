@@ -42,7 +42,8 @@ android {
 dependencies {
     val fragment_version = "1.8.5"
     implementation("androidx.fragment:fragment-ktx:$fragment_version")
-    implementation ("com.google.android.material:material:1.9.0")
+    implementation("com.google.android.material:material:1.9.0")
+    implementation("androidx.cardview:cardview:1.0.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

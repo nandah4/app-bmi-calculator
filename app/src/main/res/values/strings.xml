@@ -8,7 +8,7 @@
 
     <!--  Popup Form  -->
     <string name="popup_title">Yuk, Kenalan Dulu!</string>
-    <string name="popup_description">Masukkan nama Anda, dan kami akan membantu menghitung BMI Anda dengan pengalaman yang lebih personal.</string>
+    <string name="popup_description">Masukkan nama Anda, dan kami akan membantu menghitung BMI Anda.</string>
     <string name="popup_btn">Lanjutkan</string>
 
     <!-- TODO: Remove or change this placeholder text -->
