@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.bmicalculator.R
 import com.example.bmicalculator.databinding.FragmentManBinding
 
 class ManFragment : Fragment() {
@@ -24,19 +25,37 @@ class ManFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        binding.btnSubmitMan.setOnClickListener {
-//            val heightValue = binding.edtHeightMain.text.toString().trim()
-//            if (heightValue.isEmpty()) {
-//                binding.edtHeightMain.error = "Value is empty"
-//                return@setOnClickListener
-//            }
-//
-//            onSubmitListener?.OnSubmit(heightValue)
-//            binding.tvManHeight.text = heightValue
-//        }
-    }
 
-    fun setOnSubmitListener(listener: OnSubmitListener) {
-        onSubmitListener = listener
+        /*
+        TODO: NAVIGASI KE FRAGMENT MAN / WOMAN
+     */
+        val mFragmentManager = parentFragmentManager
+
+        val replacePageFragment: (Fragment, String) -> Unit = { fragment, tag ->
+            val isExistingFragment = mFragmentManager.findFragmentByTag(tag)
+
+            if (isExistingFragment !is Fragment) {
+                mFragmentManager.beginTransaction().apply {
+                    setReorderingAllowed(true)
+                    replace(R.id.container_fragment_home, fragment, tag)
+                    addToBackStack(null)
+                    commit()
+                }
+            }
+        }
+        binding.btnNextMan.setOnClickListener {
+            val fragmentMan = ManFragment()
+            replacePageFragment(fragmentMan, ManFragment::class.java.simpleName)
+        }
+        binding.btnNextWoman.setOnClickListener {
+            val fragmentWoman = WomanFragment()
+            replacePageFragment(fragmentWoman, WomanFragment::class.java.simpleName)
+        }
+
+
+
+        fun setOnSubmitListener(listener: OnSubmitListener) {
+            onSubmitListener = listener
+        }
     }
 }

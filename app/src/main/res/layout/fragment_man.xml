@@ -44,7 +44,7 @@
         android:layout_marginTop="30dp"
         android:text="@string/tv_detail_page_man"
         android:textSize="18sp"
-        android:textFontWeight="6000"
+        android:textFontWeight="600"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_nextMan" />
@@ -116,17 +116,5 @@
         android:textSize="15sp"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp" />
-
-
-    <!--    <EditText-->
-    <!--        android:id="@+id/edt_weight_main"-->
-    <!--        style="@style/SpaceElementHorizontal"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:inputType="number"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/tv_man_height" />-->
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
