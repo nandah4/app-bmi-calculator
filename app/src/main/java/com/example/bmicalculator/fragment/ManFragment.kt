@@ -1,19 +1,29 @@
 package com.example.bmicalculator.fragment
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.bmicalculator.R
+import com.example.bmicalculator.data.WeightProperties
 import com.example.bmicalculator.databinding.FragmentManBinding
 
 class ManFragment : Fragment() {
     private lateinit var binding: FragmentManBinding
-    private var onSubmitListener: OnSubmitListener? = null
+    private var onCountListener: OnCountListener? = null
 
-    interface OnSubmitListener {
-        fun OnSubmit(number: String)
+
+    interface OnCountListener {
+        fun onSubmitData(data: WeightProperties)
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is OnCountListener) {
+            onCountListener = context
+        }
     }
 
     override fun onCreateView(
@@ -28,7 +38,7 @@ class ManFragment : Fragment() {
 
         /*
         TODO: NAVIGASI KE FRAGMENT MAN / WOMAN
-     */
+         */
         val mFragmentManager = parentFragmentManager
 
         val replacePageFragment: (Fragment, String) -> Unit = { fragment, tag ->
@@ -52,10 +62,15 @@ class ManFragment : Fragment() {
             replacePageFragment(fragmentWoman, WomanFragment::class.java.simpleName)
         }
 
+        /*
+        TODO: HANDLE INPUT FROM EDIT TEXT
+         */
+        binding.btnSubmitMan.setOnClickListener {
+            val valueHeight = binding.edtManHeight.editText?.text.toString().trim()
+            val valueWeight = binding.edtManWeight.editText?.text.toString().trim()
 
-
-        fun setOnSubmitListener(listener: OnSubmitListener) {
-            onSubmitListener = listener
+            val data = WeightProperties("man", valueWeight.toInt(), valueHeight.toInt())
+            onCountListener?.onSubmitData(data)
         }
     }
 }

@@ -25,4 +25,6 @@
     <string name="btn_count">Hitung</string>
     <string name="tv_height">Input height (cm)</string>
     <string name="tv_weigth">Input weight (kg)</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
