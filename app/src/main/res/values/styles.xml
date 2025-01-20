@@ -28,6 +28,14 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <!--  Home  -->
+
+    <style name="ImageViewHome">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+        <item name="strokeWidth">4dp</item>
+        <item name="strokeColor">@color/bg_btn</item>
+    </style>
 
     <style name="StyleBtnHome">
         <item name="android:layout_marginTop">20dp</item>

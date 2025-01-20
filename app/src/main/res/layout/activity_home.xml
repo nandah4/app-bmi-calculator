@@ -2,30 +2,58 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_profile"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:padding="1dp"
+        android:layout_marginTop="25dp"
+        tools:src="@tools:sample/avatars"
+        app:shapeAppearance="@style/ImageViewHome"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/bg_btn"
+        style="@style/SpaceElementHorizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_headline_title"
-        android:layout_width="match_parent"
+        android:id="@+id/tv_welcome_home"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/poppins_custom"
+        android:text="Selamat Datang,"
+        android:textFontWeight="600"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="@string/tv_headline"
-        android:fontFamily="monospace"
-        android:layout_marginTop="20dp"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        style="@style/SpaceElementHorizontal" />
+        app:layout_constraintStart_toEndOf="@+id/img_profile"
+        app:layout_constraintTop_toTopOf="@+id/img_profile" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/poppins_custom"
+        android:text="John Doe Hiraki"
+        android:textFontWeight="400"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_profile"
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcome_home" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_man"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_headline_title"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_woman"
         android:text="@string/btn_man"
+        android:layout_marginTop="100dp"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="12dp"
         style="@style/StyleBtnHome" />
@@ -33,10 +61,11 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_woman"
         android:layout_width="0dp"
+        android:layout_marginTop="100dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_man"
-        app:layout_constraintTop_toBottomOf="@+id/tv_headline_title"
+        app:layout_constraintTop_toTopOf="parent"
         android:text="@string/btn_woman"
         android:layout_marginEnd="25dp"
         android:layout_marginStart="12dp"
