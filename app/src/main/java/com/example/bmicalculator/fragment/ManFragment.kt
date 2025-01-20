@@ -69,6 +69,15 @@ class ManFragment : Fragment() {
             val valueHeight = binding.edtManHeight.editText?.text.toString().trim()
             val valueWeight = binding.edtManWeight.editText?.text.toString().trim()
 
+            if (valueHeight.isEmpty()) {
+                binding.edtManHeight.error = "Must have at least 1 character"
+                return@setOnClickListener
+            }
+            if (valueWeight.isEmpty()) {
+                binding.edtManWeight.error = "Must have at least 1 character"
+                return@setOnClickListener
+            }
+
             val data = WeightProperties("man", valueWeight.toInt(), valueHeight.toInt())
             onCountListener?.onSubmitData(data)
         }
