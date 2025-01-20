@@ -6,50 +6,127 @@
     android:layout_height="match_parent"
     tools:context=".fragment.ManFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_nextMan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_nextWoman"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/BtnForm"
+        android:fontFamily="@font/poppins_custom"
+        android:text="@string/btn_man" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_nextWoman"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_nextMan"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/BtnForm"
+        android:fontFamily="@font/poppins_custom"
+        android:text="@string/btn_woman" />
+
+    <!--    TODO: Form Input Height and Weight for Man-->
     <TextView
-        android:id="@+id/tv_man_height"
+        android:id="@+id/tv_detail_page_man"
+        android:fontFamily="@font/poppins_custom"
         style="@style/SpaceElementHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/tv_detail_page_man"
+        android:textSize="18sp"
+        android:textFontWeight="6000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_nextMan" />
+
+    <TextView
+        android:id="@+id/tv_description_man"
+        android:fontFamily="@font/poppins_custom"
+        style="@style/SpaceElementHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/tv_description_count"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_page_man" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_man_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_description_man"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/SpaceElementHorizontal"
         android:layout_marginTop="20dp"
-        android:text="@string/hello_blank_fragment"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:hint="@string/tv_height"
+        app:hintTextColor="@color/bg_btn"
+        app:boxStrokeColor="@color/bg_btn">
 
-    <EditText
-        android:id="@+id/edt_height_main"
-        style="@style/SpaceElementHorizontal"
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppins_custom"
+            android:textSize="15sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_man_weight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_man_height"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_man_height" />
-
-    <EditText
-        android:id="@+id/edt_weight_main"
+        app:layout_constraintEnd_toEndOf="parent"
         style="@style/SpaceElementHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edt_height_main" />
+        android:layout_marginTop="10dp"
+        android:hint="@string/tv_weigth"
+        app:hintTextColor="@color/bg_btn"
+        app:boxStrokeColor="@color/bg_btn">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppins_custom"
+            android:textSize="15sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_submit_man"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_custom"
-        style="@style/SpaceElementHorizontal.Btn"
+        style="@style/BtnForm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_weight_main"
+        app:layout_constraintTop_toBottomOf="@+id/edt_man_weight"
         android:text="@string/btn_count"
-        android:textSize="16sp" />
+        android:textSize="15sp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp" />
+
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/edt_weight_main"-->
+    <!--        style="@style/SpaceElementHorizontal"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:inputType="number"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tv_man_height" />-->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

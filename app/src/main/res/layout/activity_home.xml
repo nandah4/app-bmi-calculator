@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/img_profile"
@@ -15,6 +16,7 @@
         app:shapeAppearance="@style/ImageViewHome"
         app:strokeWidth="2dp"
         app:strokeColor="@color/bg_btn"
+        android:scaleType="centerCrop"
         style="@style/SpaceElementHorizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -40,36 +42,36 @@
         android:fontFamily="@font/poppins_custom"
         android:text="John Doe Hiraki"
         android:textFontWeight="400"
-        android:textSize="15dp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/img_profile"
         app:layout_constraintTop_toBottomOf="@+id/tv_welcome_home" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_man"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_woman"
-        android:text="@string/btn_man"
-        android:layout_marginTop="100dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="12dp"
-        style="@style/StyleBtnHome" />
+    <!--    <com.google.android.material.button.MaterialButton-->
+    <!--        android:id="@+id/btn_man"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/btn_woman"-->
+    <!--        android:text="@string/btn_man"-->
+    <!--        android:layout_marginTop="100dp"-->
+    <!--        android:layout_marginStart="25dp"-->
+    <!--        android:layout_marginEnd="12dp"-->
+    <!--        style="@style/StyleBtnHome" />-->
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_woman"
-        android:layout_width="0dp"
-        android:layout_marginTop="100dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_man"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="@string/btn_woman"
-        android:layout_marginEnd="25dp"
-        android:layout_marginStart="12dp"
-        style="@style/StyleBtnHome" />
+    <!--    <com.google.android.material.button.MaterialButton-->
+    <!--        android:id="@+id/btn_woman"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_marginTop="100dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/btn_man"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        android:text="@string/btn_woman"-->
+    <!--        android:layout_marginEnd="25dp"-->
+    <!--        android:layout_marginStart="12dp"-->
+    <!--        style="@style/StyleBtnHome" />-->
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/container_fragment_home"
@@ -79,7 +81,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_man"
+        app:layout_constraintTop_toBottomOf="@id/img_profile"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

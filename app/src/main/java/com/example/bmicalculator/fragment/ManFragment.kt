@@ -24,16 +24,16 @@ class ManFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding.btnSubmitMan.setOnClickListener {
-            val heightValue = binding.edtHeightMain.text.toString().trim()
-            if (heightValue.isEmpty()) {
-                binding.edtHeightMain.error = "Value is empty"
-                return@setOnClickListener
-            }
-
-            onSubmitListener?.OnSubmit(heightValue)
-            binding.tvManHeight.text = heightValue
-        }
+//        binding.btnSubmitMan.setOnClickListener {
+//            val heightValue = binding.edtHeightMain.text.toString().trim()
+//            if (heightValue.isEmpty()) {
+//                binding.edtHeightMain.error = "Value is empty"
+//                return@setOnClickListener
+//            }
+//
+//            onSubmitListener?.OnSubmit(heightValue)
+//            binding.tvManHeight.text = heightValue
+//        }
     }
 
     fun setOnSubmitListener(listener: OnSubmitListener) {

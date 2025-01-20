@@ -46,12 +46,6 @@ class FormFragment : DialogFragment() {
                 listener?.onSubmit(nameValue)
                 dismiss()
             }
-//                val intent = Intent(requireActivity(), HomeActivity::class.java)
-//                intent.putExtra(HomeActivity.EXTRA_NAME, nameValue)
-//                startActivity(intent)
-//                requireActivity().finish()
-
-
         }
     }
 }
