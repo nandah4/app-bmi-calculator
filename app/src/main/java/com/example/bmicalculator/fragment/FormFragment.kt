@@ -44,6 +44,7 @@ class FormFragment : DialogFragment() {
                 return@setOnClickListener
             } else {
                 listener?.onSubmit(nameValue)
+
                 dismiss()
             }
         }

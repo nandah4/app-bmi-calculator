@@ -1,6 +1,5 @@
 package com.example.bmicalculator.fragment
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,19 +11,19 @@ import com.example.bmicalculator.databinding.FragmentManBinding
 
 class ManFragment : Fragment() {
     private lateinit var binding: FragmentManBinding
-    private var onCountListener: OnCountListener? = null
-
-
-    interface OnCountListener {
-        fun onSubmitData(data: WeightProperties)
-    }
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        if (context is OnCountListener) {
-            onCountListener = context
-        }
-    }
+//    private var onCountListener: OnCountListener? = null
+//
+//
+//    interface OnCountListener {
+//        fun onSubmitData(data: WeightProperties)
+//    }
+//
+//    override fun onAttach(context: Context) {
+//        super.onAttach(context)
+//        if (context is OnCountListener) {
+//            onCountListener = context
+//        }
+//    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -53,12 +52,12 @@ class ManFragment : Fragment() {
                 }
             }
         }
+        val fragmentMan = ManFragment()
+        val fragmentWoman = WomanFragment()
         binding.btnNextMan.setOnClickListener {
-            val fragmentMan = ManFragment()
             replacePageFragment(fragmentMan, ManFragment::class.java.simpleName)
         }
         binding.btnNextWoman.setOnClickListener {
-            val fragmentWoman = WomanFragment()
             replacePageFragment(fragmentWoman, WomanFragment::class.java.simpleName)
         }
 
@@ -78,8 +77,12 @@ class ManFragment : Fragment() {
                 return@setOnClickListener
             }
 
-            val data = WeightProperties("man", valueWeight.toInt(), valueHeight.toInt())
-            onCountListener?.onSubmitData(data)
+            val fragmentResult = ResultFragment()
+            val bundle = Bundle()
+            val data = WeightProperties("Man", valueWeight.toInt(), valueHeight.toInt())
+            bundle.putParcelable(ResultFragment.EXTRA_WEIGHT_PROPERTIES, data)
+            fragmentResult.arguments = bundle
+            replacePageFragment(fragmentResult, ResultFragment::class.java.simpleName)
         }
     }
 }

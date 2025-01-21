@@ -1,15 +1,13 @@
 package com.example.bmicalculator
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.bmicalculator.data.WeightProperties
 import com.example.bmicalculator.databinding.ActivityHomeBinding
 import com.example.bmicalculator.fragment.ManFragment
 import com.example.bmicalculator.fragment.WomanFragment
 
 
-class HomeActivity : AppCompatActivity(), ManFragment.OnCountListener {
+class HomeActivity : AppCompatActivity() {
 
     companion object {
         const val EXTRA_NAME = "extra_name"
@@ -35,9 +33,9 @@ class HomeActivity : AppCompatActivity(), ManFragment.OnCountListener {
             .commit()
     }
 
-    override fun onSubmitData(data: WeightProperties) {
-        val (type, weight, height) = data
-
-        Toast.makeText(this, "Your height is $height", Toast.LENGTH_SHORT).show()
-    }
+//    override fun onSubmitData(data: WeightProperties) {
+//        val (type, weight, height) = data
+//
+//        Toast.makeText(this, "Your height is $height", Toast.LENGTH_SHORT).show()
+//    }
 }
