@@ -79,7 +79,7 @@ class ManFragment : Fragment() {
 
             val fragmentResult = ResultFragment()
             val bundle = Bundle()
-            val data = WeightProperties("Man", valueWeight.toInt(), valueHeight.toInt())
+            val data = WeightProperties("Man", valueWeight.toDouble(), valueHeight.toDouble())
             bundle.putParcelable(ResultFragment.EXTRA_WEIGHT_PROPERTIES, data)
             fragmentResult.arguments = bundle
             replacePageFragment(fragmentResult, ResultFragment::class.java.simpleName)
