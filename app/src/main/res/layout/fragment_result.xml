@@ -4,34 +4,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.ResultFragment">
+    tools:context=".fragment.ResultFragment"
+    android:background="@color/white">
 
-    <TextView
-        android:id="@+id/tv_type"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shapeableImageView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ini type"
+        android:layout_height="250dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/result_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_height"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chart"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/tv_height"
+        android:layout_height="100dp"
+        android:background="@drawable/chart"
+        style="@style/SpaceElementHorizontal"
+        android:layout_marginTop="-13dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_type" />
+        app:layout_constraintTop_toBottomOf="@+id/shapeableImageView2"
+        android:elevation="2dp">
 
-    <TextView
-        android:id="@+id/tv_weight"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/tv_weigth"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_height" />
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/tv_text_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="BMI untuk"
+            app:layout_constraintEnd_toStartOf="@+id/tv_type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textAlignment="textEnd"
+            android:fontFamily="@font/poppins_custom"
+            android:layout_marginEnd="2dp"
+            android:textSize="16sp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/tv_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Laki-laki"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_text_type"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/poppins_custom"
+            android:layout_marginStart="5dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_category_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/tv_height"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_type"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppins_custom"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+        <!--        <TextView-->
+        <!--            android:layout_width=""-->
+        <!--            android:layout_height=""-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    <TextView-->
+    <!--        android:layout_marginTop="300dp"-->
+    <!--        android:background="@drawable/chart"-->
+    <!--        android:id="@+id/tv_type"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Ini type"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/tv_weight"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/tv_weigth"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tv_height" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

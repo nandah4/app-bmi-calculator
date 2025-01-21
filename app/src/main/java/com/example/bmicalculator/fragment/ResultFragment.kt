@@ -38,8 +38,8 @@ class ResultFragment : Fragment() {
 
             val (type, categoryResult, weightResult) = getWeightCategory(data)
             val strFormat = String.format("%.2f", weightResult)
-            binding.tvHeight.text = categoryResult
-            binding.tvWeight.text = strFormat
+            binding.tvCategoryResult.text = categoryResult
+//            binding.tvWeight.text = strFormat
             binding.tvType.text = type
         }
     }
