@@ -19,6 +19,4 @@ class WomanFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_woman, container, false)
     }
-
-   
 }
