@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.bmicalculator.data.ResultProperties
 import com.example.bmicalculator.data.WeightProperties
 import com.example.bmicalculator.databinding.FragmentResultBinding
 
@@ -38,20 +39,34 @@ class ResultFragment : Fragment() {
 
             val (type, categoryResult, weightResult) = getWeightCategory(data)
             val strFormat = String.format("%.2f", weightResult)
-            binding.tvCategoryResult.text = categoryResult
+//            binding.tvCategoryResult.text = categoryResult
 //            binding.tvWeight.text = strFormat
             binding.tvType.text = type
         }
     }
 
-    fun getWeightCategory(data: WeightProperties?): Triple<String, String, Double> {
+    fun getWeightCategory(data: WeightProperties?): ResultProperties {
         data?.let {
             val weightResult = it.weight / ((it.height / 100.0) * (it.height / 100.0))
             val type = it.type
             val categoryResult = getBMICategory(weightResult)
-            return Triple(type, categoryResult, weightResult)
+            return ResultProperties(
+                type,
+                data.height,
+                data.weight,
+                weightResult,
+                categoryResult,
+                ""
+            )
         }
-        return Triple("Unknow", "Unknown", 0.00)
+        return ResultProperties(
+            "Tidak ditemukan",
+            0.0,
+            0.0,
+            0.0,
+            "Tidak ditemukan ",
+            "Tidak ditemukan"
+        )
     }
 
     fun getBMICategory(weightResult: Double): String {

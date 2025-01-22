@@ -27,4 +27,15 @@
     <string name="tv_weigth">Input weight (kg)</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- TODO: RESULT PAGE -->
+    <string name="tv_label_height">Tinggi (cm)</string>
+    <string name="tv_value_height">180</string>
+    <string name="tv_label_weight">Berat (kg)</string>
+    <string name="tv_value_weight">80</string>
+
+    <string name="tv_label_bmi_result">BMI kamu adalah</string>
+    <string name="tv_value_bmi_result">20,2</string>
+
+
 </resources>

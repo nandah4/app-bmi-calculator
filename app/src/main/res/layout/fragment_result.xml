@@ -20,7 +20,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/chart"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/chart"
         style="@style/SpaceElementHorizontal"
         android:layout_marginTop="-13dp"
@@ -73,29 +73,69 @@
             android:textSize="18sp"
             android:textColor="@color/white" />
 
+        <TextView
+            android:id="@+id/tv_label_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_label_height"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_category_result"
+            android:layout_marginStart="20dp"
+            style="@style/Result.TextView.Label" />
 
+        <TextView
+            android:id="@+id/tv_value_height"
+            style="@style/Result.TextView.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/tv_value_height"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_height"
+            app:layout_constraintTop_toTopOf="@+id/tv_label_height" />
+
+        <TextView
+            android:id="@+id/tv_label_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/tv_label_weight"
+            style="@style/Result.TextView.Label.MarginEnd"
+            app:layout_constraintEnd_toStartOf="@+id/tv_value_weight"
+            app:layout_constraintTop_toBottomOf="@+id/tv_category_result" />
+
+        <TextView
+            android:id="@+id/tv_value_weight"
+            style="@style/Result.TextView.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="@string/tv_value_weight"
+            app:layout_constraintEnd_toEndOf="@+id/tv_category_result"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toTopOf="@+id/tv_label_weight" />
+
+        <TextView
+            android:id="@+id/tv_label_bmi_result"
+            style="@style/Result.TextView.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_label_bmi_result"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_height"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/tv_value_bmi_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_value_bmi_result"
+            style="@style/Result.TextView.Label"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@+id/tv_label_bmi_result"
+            app:layout_constraintTop_toTopOf="@+id/tv_label_bmi_result" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!--    <TextView-->
-    <!--        android:layout_marginTop="300dp"-->
-    <!--        android:background="@drawable/chart"-->
-    <!--        android:id="@+id/tv_type"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="Ini type"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/tv_weight"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="@string/tv_weigth"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/tv_height" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
