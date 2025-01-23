@@ -18,8 +18,8 @@
 
     <!-- Man Fragment -->
     <string name="tv_description_count">Untuk menghitung BMI Anda, kami memerlukan dua informasi penting: tinggi badan dan berat badan. Yuk, input data Anda untuk mengetahui status kesehatan tubuh!</string>
-    <string name="tv_detail_page_man">Anda berada di Halaman Man</string>
-    <string name="tv_detail_page_woman">Anda berada di Halaman Woan</string>
+    <string name="tv_detail_page_man">Anda berada di Halaman Laki-laki</string>
+    <string name="tv_detail_page_woman">Anda berada di Halaman Perempuan</string>
 
     <!--  Count Page  -->
     <string name="btn_count">Hitung</string>

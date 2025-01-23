@@ -1,15 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.WomanFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_nextMan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/BtnForm"
+        android:fontFamily="@font/poppins_custom"
+        android:text="@string/btn_man" />
+
+    <!--    TODO: Form Input Height and Weight for Man-->
     <TextView
-
+        android:id="@+id/tv_detail_page_woman"
+        android:fontFamily="@font/poppins_custom"
+        style="@style/SpaceElementHorizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/tv_height" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/tv_detail_page_woman"
+        android:textSize="18sp"
+        android:textFontWeight="600"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_nextMan" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tv_description_woman"
+        android:fontFamily="@font/poppins_custom"
+        style="@style/SpaceElementHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/tv_description_count"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_page_woman" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_woman_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_description_woman"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/SpaceElementHorizontal"
+        android:layout_marginTop="20dp"
+        android:hint="@string/tv_height"
+        app:hintTextColor="@color/bg_btn"
+        app:boxStrokeColor="@color/bg_btn">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_woman_height_inner"
+            android:maxLength="3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppins_custom"
+            android:textSize="15sp"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_woman_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/edt_woman_height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/SpaceElementHorizontal"
+        android:layout_marginTop="10dp"
+        android:hint="@string/tv_weigth"
+        app:hintTextColor="@color/bg_btn"
+        app:boxStrokeColor="@color/bg_btn">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_woman_weight_inner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppins_custom"
+            android:textSize="15sp"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_submit_man"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_custom"
+        style="@style/BtnForm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_woman_weight"
+        android:text="@string/btn_count"
+        android:textSize="15sp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

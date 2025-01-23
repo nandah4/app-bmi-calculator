@@ -7,28 +7,14 @@
     tools:context=".fragment.ManFragment">
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_nextMan"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_nextWoman"
-        app:layout_constraintTop_toTopOf="parent"
-        style="@style/BtnForm"
-        android:fontFamily="@font/poppins_custom"
-        android:text="@string/btn_man" />
-
-    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_nextWoman"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="25dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="25dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_nextMan"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         style="@style/BtnForm"
         android:fontFamily="@font/poppins_custom"
@@ -47,7 +33,7 @@
         android:textFontWeight="600"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_nextMan" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_nextWoman" />
 
     <TextView
         android:id="@+id/tv_description_man"
@@ -76,6 +62,8 @@
         app:boxStrokeColor="@color/bg_btn">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_man_height_inner"
+            android:maxLength="3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/poppins_custom"
@@ -97,6 +85,7 @@
         app:boxStrokeColor="@color/bg_btn">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_man_weight_inner"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/poppins_custom"

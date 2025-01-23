@@ -40,25 +40,33 @@ class ManFragment : Fragment() {
          */
         val mFragmentManager = parentFragmentManager
 
-        val replacePageFragment: (Fragment, String) -> Unit = { fragment, tag ->
-            val isExistingFragment = mFragmentManager.findFragmentByTag(tag)
-
-            if (isExistingFragment !is Fragment) {
-                mFragmentManager.beginTransaction().apply {
-                    setReorderingAllowed(true)
-                    replace(R.id.container_fragment_home, fragment, tag)
-                    addToBackStack(null)
-                    commit()
-                }
-            }
-        }
-        val fragmentMan = ManFragment()
+//        val replacePageFragment: (Fragment, String) -> Unit = { fragment, tag ->
+//            val transaction = mFragmentManager.beginTransaction()
+//            val isExistingFragment = mFragmentManager.findFragmentByTag(tag)
+//
+//            if (isExistingFragment != null) {
+//                transaction.detach(isExistingFragment).attach(isExistingFragment)
+//            } else {
+//                transaction.apply {
+//                    setReorderingAllowed(true)
+//                    replace(R.id.container_fragment_home, fragment, tag)
+//                    addToBackStack(null)
+//                }
+//            }
+//            transaction.commit()
+//        }
         val fragmentWoman = WomanFragment()
-        binding.btnNextMan.setOnClickListener {
-            replacePageFragment(fragmentMan, ManFragment::class.java.simpleName)
-        }
         binding.btnNextWoman.setOnClickListener {
-            replacePageFragment(fragmentWoman, WomanFragment::class.java.simpleName)
+            mFragmentManager.beginTransaction().apply {
+                setReorderingAllowed(true)
+                replace(
+                    R.id.container_fragment_home,
+                    fragmentWoman,
+                    WomanFragment::class.java.simpleName
+                )
+                addToBackStack(null)
+                commit()
+            }
         }
 
         /*
@@ -82,7 +90,34 @@ class ManFragment : Fragment() {
             val data = WeightProperties("Man", valueWeight.toDouble(), valueHeight.toDouble())
             bundle.putParcelable(ResultFragment.EXTRA_WEIGHT_PROPERTIES, data)
             fragmentResult.arguments = bundle
-            replacePageFragment(fragmentResult, ResultFragment::class.java.simpleName)
+            mFragmentManager.beginTransaction().apply {
+                setReorderingAllowed(true)
+                replace(
+                    R.id.container_fragment_home,
+                    fragmentResult,
+                    ResultFragment::class.java.simpleName
+                )
+                addToBackStack(null)
+                commit()
+            }
         }
+
+        binding.edtManHeightInner.setOnFocusChangeListener { v, hasFocus ->
+            if (hasFocus) {
+                binding.edtManHeight.helperText = "Maksimal 3 nomor"
+            } else {
+                binding.edtManHeight.helperText = null
+            }
+        }
+
+        binding.edtManWeightInner.setOnFocusChangeListener { v, hasFocus ->
+            if (hasFocus) {
+                binding.edtManWeight.helperText = "Maksimal 3 nomor"
+            } else {
+                binding.edtManWeight.helperText = null
+            }
+        }
+
+
     }
 }
