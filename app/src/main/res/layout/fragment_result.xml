@@ -82,11 +82,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_category_result"
             android:layout_marginStart="20dp"
-            style="@style/Result.TextView.Label" />
+            style="@style/ResultTextViewLabel" />
 
         <TextView
             android:id="@+id/tv_value_height"
-            style="@style/Result.TextView.Label"
+            style="@style/ResultTextViewLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -100,13 +100,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/tv_label_weight"
-            style="@style/Result.TextView.Label.MarginEnd"
+            style="@style/ResultTextViewLabel.MarginEnd"
             app:layout_constraintEnd_toStartOf="@+id/tv_value_weight"
             app:layout_constraintTop_toBottomOf="@+id/tv_category_result" />
 
         <TextView
             android:id="@+id/tv_value_weight"
-            style="@style/Result.TextView.Label"
+            style="@style/ResultTextViewLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
@@ -117,7 +117,7 @@
 
         <TextView
             android:id="@+id/tv_label_bmi_result"
-            style="@style/Result.TextView.Label"
+            style="@style/ResultTextViewLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tv_label_bmi_result"
@@ -131,10 +131,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/tv_value_bmi_result"
-            style="@style/Result.TextView.Label"
+            style="@style/ResultTextViewLabel"
             android:layout_marginStart="8dp"
             app:layout_constraintStart_toEndOf="@+id/tv_label_bmi_result"
             app:layout_constraintTop_toTopOf="@+id/tv_label_bmi_result" />
+
+        <TextView
+            android:id="@+id/tv_result_motivation"
+            style="@style/ResultTextViewLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/tv_result_motivation"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_value_bmi_result" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

@@ -37,11 +37,16 @@ class ResultFragment : Fragment() {
                 bundle.getParcelable(EXTRA_WEIGHT_PROPERTIES)
             }
 
-            val (type, categoryResult, weightResult) = getWeightCategory(data)
+            val (type, height, weight, weightResult, categoryResult, motivationResult) = getWeightCategory(
+                data
+            )
             val strFormat = String.format("%.2f", weightResult)
-//            binding.tvCategoryResult.text = categoryResult
-//            binding.tvWeight.text = strFormat
+            binding.tvCategoryResult.text = categoryResult
+            binding.tvValueHeight.text = height.toInt().toString()
+            binding.tvValueWeight.text = weight.toInt().toString()
+            binding.tvValueBmiResult.text = strFormat
             binding.tvType.text = type
+            binding.tvResultMotivation.text = motivationResult
         }
     }
 
@@ -50,13 +55,14 @@ class ResultFragment : Fragment() {
             val weightResult = it.weight / ((it.height / 100.0) * (it.height / 100.0))
             val type = it.type
             val categoryResult = getBMICategory(weightResult)
+            val motivationResult = getMotivationResult(weightResult)
             return ResultProperties(
                 type,
                 data.height,
                 data.weight,
                 weightResult,
                 categoryResult,
-                ""
+                motivationResult
             )
         }
         return ResultProperties(
@@ -67,6 +73,17 @@ class ResultFragment : Fragment() {
             "Tidak ditemukan ",
             "Tidak ditemukan"
         )
+    }
+
+    fun getMotivationResult(data: Double): String {
+        val mtvResult = when {
+            data < 18.5 -> "Jangan lupa makan makanan bergizi dan perbanyak asupan protein untuk mencapai berat badan idealmu!"
+            data in 18.5..24.9 -> "Pertahankan gaya hidup sehatmu! Tetap aktif dan jaga pola makan seimbang."
+            data in 25.0..29.9 -> "Yuk, mulai rutinitas olahraga dan kurangi konsumsi makanan tinggi kalori untuk hidup lebih sehat!"
+            data > 30 -> "Mari menuju berat ideal, perubahan kecil setiap hari bisa membawa hasil besar. Konsultasikan dengan ahli untuk solusi terbaik!"
+            else -> "Tidak ditemukan hasil. Coba cek kembali data yang dimasukkan."
+        }
+        return mtvResult
     }
 
     fun getBMICategory(weightResult: Double): String {

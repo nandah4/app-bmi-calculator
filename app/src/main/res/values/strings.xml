@@ -37,5 +37,7 @@
     <string name="tv_label_bmi_result">BMI kamu adalah</string>
     <string name="tv_value_bmi_result">20,2</string>
 
+    <string name="tv_result_motivation">Mari hidup sehat!</string>
+
 
 </resources>
